@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    margin: 0;
+}
+
+.block {
+    position: relative;
+    margin: 25vh auto;
+    width: 50%;
+    min-width: 320px;
+    min-height: 320px;
+    background: linear-gradient(0deg, #000, #262626);
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.shadow::before,
+.shadow::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    z-index: -1;
+    animation: shadow 20s linear infinite;
+}
+
+.shadow::after {
+    filter: blur(20px);
+}
+
+h1 {
+    margin: 0 auto;
+    color: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    z-index: 1;
+    animation: h1 20s linear infinite;
+}
+
+
+a {
+    color: gold;
+    transition: 3s;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 44px;
+    text-decoration: none;
+}
+
+h3 {
+    animation: h3 5s linear infinite;
+}
+
+@keyframes h1 {
+    0% {
+        color: #fb0094;
+    }
+
+    10% {
+        color: #0000ff;
+    }
+
+    20% {
+        color: #00ff00;
+    }
+
+    30% {
+        color: #ffff00;
+    }
+
+    40% {
+        color: #ff0000;
+    }
+
+    50% {
+        color: #0000ff;
+    }
+
+    60% {
+        color: #00ff00;
+    }
+
+    70% {
+        color: #ffff00;
+    }
+
+    80% {
+        color: #ff0000;
+    }
+
+    90% {
+        color: #fb0094;
+    }
+
+    100% {
+        color: #0000ff;
+    }
+}
+
+@keyframes h3 {
+    0% {
+        color: #0000ff;
+        opacity: 1;
+    }
+
+    10% {
+        color: #00ff00;
+        opacity: 0;
+    }
+
+    20% {
+        color: #ffff00;
+        opacity: 1;
+    }
+
+    30% {
+        color: #ff0000;
+        opacity: 0;
+    }
+
+    40% {
+        color: #fb0094;
+        opacity: 1;
+    }
+
+    50% {
+        color: #0000ff;
+        opacity: 0;
+    }
+
+    60% {
+        color: #00ff00;
+        opacity: 1;
+    }
+
+    70% {
+        color: #ffff00;
+        opacity: 0;
+    }
+
+    80% {
+        color: #ff0000;
+        opacity: 1;
+    }
+
+    90% {
+        color: #fb0094;
+        opacity: 0;
+    }
+
+    100% {
+        color: #0000ff;
+        opacity: 1;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        background-position: 300% 0;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300% 0;
+    }
+}
